@@ -1,4 +1,5 @@
 torch==1.5.0
-tensorflow-gpu==2.1
+tensorflow-gpu
 higher==0.2
 kornia==0.3.0
+wandb

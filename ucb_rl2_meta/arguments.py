@@ -236,3 +236,17 @@ parser.add_argument(
     type=float,
     default=0.10, 
     help='fraction of the PPO buffer used for test by the meta-learner.')
+
+# wandb arguments
+parser.add_argument(
+    '--wandb_project',
+    type=str,
+    default='autodrac',
+    help='Name of wandb project')
+
+parser.add_argument(
+    '--wandb_entity',
+    type=str,
+    default='level-replay',
+    help='Name of wandb entity')
+

@@ -1,0 +1,49 @@
+Not using CUDA
+Logging to /Users/minqijiang/logs/autodrac
+
+Update 0, step 1024 
+ Last 4 training episodes: mean/median reward 0.5/0.5
+Last 10 test episodes: mean/median reward 0.8/0.5
+
+------------------------------------------
+| losses/action_loss          | -0.00275 |
+| losses/dist_entropy         | 2.71     |
+| losses/value_loss           | 1.13     |
+| test/mean_episode_reward    | 0.8      |
+| test/median_episode_reward  | 0.5      |
+| train/mean_episode_reward   | 0.5      |
+| train/median_episode_reward | 0.5      |
+| train/nupdates              | 0        |
+| train/total_num_steps       | 1.02e+03 |
+------------------------------------------
+> /Users/minqijiang/research/reference/auto-drac/train.py(271)train()
+-> wandb.log(logger.getkvs())
+(Pdb) *** NameError: name 'kvs' is not defined
+(Pdb) *** NameError: name 'kv' is not defined
+(Pdb) *** NameError: name 'ls' is not defined
+(Pdb) 266  	            logger.logkv("test/median_episode_reward", np.median(eval_episode_rewards))
+267  	
+268  	            logger.dumpkvs()
+269  	
+270  	            import pdb; pdb.set_trace()
+271  ->	            wandb.log(logger.getkvs())
+272  	
+273  	        # Save Model
+274  	        if (j > 0 and j % args.save_interval == 0
+275  	                or j == num_updates - 1) and args.save_dir != "":
+276  	            try:
+(Pdb) defaultdict(<class 'float'>, {})
+(Pdb) 0.5
+(Pdb) 
+Traceback (most recent call last):
+  File "train.py", line 289, in <module>
+    except OSError:
+  File "train.py", line 271, in train
+    # logger.logkv("losses/action_loss", action_loss)
+  File "train.py", line 271, in train
+    # logger.logkv("losses/action_loss", action_loss)
+  File "/Users/minqijiang/miniconda3/envs/auto-drac/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/Users/minqijiang/miniconda3/envs/auto-drac/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

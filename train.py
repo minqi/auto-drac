@@ -23,6 +23,8 @@ from ucb_rl2_meta.envs import VecPyTorchProcgen, TransposeImageProcgen
 from ucb_rl2_meta.arguments import parser
 import data_augs
 
+import wandb
+
 aug_to_func = {    
         'crop': data_augs.Crop,
         'random-conv': data_augs.RandomConv,
@@ -35,7 +37,15 @@ aug_to_func = {
 }
 
 def train(args):
+    xpid = '-{}-{}-reproduce-s{}'.format(args.run_name, args.env_name, args.seed)
+
+    wandb.init(project=args.wandb_project, entity=args.wandb_entity, config=args, name=xpid)
     args.cuda = not args.no_cuda and torch.cuda.is_available()
+
+    if args.cuda:
+        print('Using CUDA')
+    else:
+        print('Not using CUDA')
 
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
@@ -46,7 +56,7 @@ def train(args):
     torch.set_num_threads(1)
     device = torch.device("cuda:0" if args.cuda else "cpu")
 
-    log_file = '-{}-{}-reproduce-s{}'.format(args.run_name, args.env_name, args.seed)
+    log_file = xpid
 
     venv = ProcgenEnv(num_envs=args.num_processes, env_name=args.env_name, \
         num_levels=args.num_levels, start_level=args.start_level, \
@@ -239,23 +249,24 @@ def train(args):
                         np.median(episode_rewards), dist_entropy, value_loss,
                         action_loss))
             
-            logger.logkv("train/nupdates", j)
-            logger.logkv("train/total_num_steps", total_num_steps)            
-
-            logger.logkv("losses/dist_entropy", dist_entropy)
-            logger.logkv("losses/value_loss", value_loss)
-            logger.logkv("losses/action_loss", action_loss)
-
-            logger.logkv("train/mean_episode_reward", np.mean(episode_rewards))
-            logger.logkv("train/median_episode_reward", np.median(episode_rewards))
-
             ### Eval on the Full Distribution of Levels ###
             eval_episode_rewards = evaluate(args, actor_critic, device, aug_id=aug_id)
 
-            logger.logkv("test/mean_episode_reward", np.mean(eval_episode_rewards))
-            logger.logkv("test/median_episode_reward", np.median(eval_episode_rewards))
+            stats = {
+                "train/nupdates": j,
+                "train/total_num_steps": total_num_steps,
+                "losses/dist_entropy": dist_entropy,
+                "losses/value_loss": value_loss,
+                "losses/action_loss": action_loss,
+                "train/mean_episode_reward": np.mean(episode_rewards),
+                "train/median_episode_reward": np.median(episode_rewards),
+                "test/mean_episode_reward": np.mean(eval_episode_rewards),
+                "test/median_episode_reward":np.median(eval_episode_rewards)
+            }
 
+            logger.logkvs(stats)
             logger.dumpkvs()
+            wandb.log(stats)
 
         # Save Model
         if (j > 0 and j % args.save_interval == 0

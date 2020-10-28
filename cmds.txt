@@ -1,0 +1,420 @@
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 0 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 0 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 0 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 0 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 0 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 1 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 1 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 1 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 1 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 1 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 2 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 2 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 2 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 2 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 2 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 3 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 3 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 3 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 3 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 3 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 4 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 4 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 4 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 4 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 4 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name bigfish \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 5 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name plunder \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 5 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name chaser \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 5 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name dodgeball \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 5 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+
+python train.py \
+--env_name miner \
+--use_ucb \
+--num_processes 64 \
+--log_interval 1 \
+--save_interval 10 \
+--num_levels 200 \
+--save_dir '~/logs/autodrac' \
+--log_dir '~/logs/autodrac' \
+--seed 5 \
+--run_name ucb-drac \
+--wandb_entity level-replay \
+--wandb_project ucb-drac
+

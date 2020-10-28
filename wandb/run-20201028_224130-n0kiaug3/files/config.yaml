@@ -1,0 +1,151 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.8
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+alpha:
+  desc: null
+  value: 0.99
+aug_coef:
+  desc: null
+  value: 0.1
+aug_extra_shape:
+  desc: null
+  value: 0
+aug_type:
+  desc: null
+  value: crop
+clip_param:
+  desc: null
+  value: 0.2
+distribution_mode:
+  desc: null
+  value: easy
+entropy_coef:
+  desc: null
+  value: 0.01
+env_name:
+  desc: null
+  value: bigfish
+eps:
+  desc: null
+  value: 1.0e-05
+gae_lambda:
+  desc: null
+  value: 0.95
+gamma:
+  desc: null
+  value: 0.999
+hidden_size:
+  desc: null
+  value: 256
+image_pad:
+  desc: null
+  value: 12
+log_dir:
+  desc: null
+  value: ~/logs/autodrac
+log_interval:
+  desc: null
+  value: 10
+lr:
+  desc: null
+  value: 0.0005
+max_grad_norm:
+  desc: null
+  value: 0.5
+meta_batch_size:
+  desc: null
+  value: 64
+meta_grad_clip:
+  desc: null
+  value: 100
+meta_num_test_steps:
+  desc: null
+  value: 1
+meta_num_train_steps:
+  desc: null
+  value: 1
+no_cuda:
+  desc: null
+  value: false
+num_env_steps:
+  desc: null
+  value: 25000000.0
+num_levels:
+  desc: null
+  value: 200
+num_mini_batch:
+  desc: null
+  value: 8
+num_processes:
+  desc: null
+  value: 64
+num_steps:
+  desc: null
+  value: 256
+ppo_epoch:
+  desc: null
+  value: 3
+preempt:
+  desc: null
+  value: false
+rl2_entropy_coef:
+  desc: null
+  value: 0.001
+rl2_eps:
+  desc: null
+  value: 1.0e-05
+rl2_hidden_size:
+  desc: null
+  value: 32
+rl2_lr:
+  desc: null
+  value: 0.0005
+run_name:
+  desc: null
+  value: ucb-drac
+save_dir:
+  desc: null
+  value: checkpoints
+save_interval:
+  desc: null
+  value: 10
+seed:
+  desc: null
+  value: 1
+split_ratio:
+  desc: null
+  value: 0.1
+start_level:
+  desc: null
+  value: 0
+ucb_exploration_coef:
+  desc: null
+  value: 0.1
+ucb_window_length:
+  desc: null
+  value: 10
+use_meta_learning:
+  desc: null
+  value: false
+use_rl2:
+  desc: null
+  value: false
+use_ucb:
+  desc: null
+  value: true
+value_loss_coef:
+  desc: null
+  value: 0.5
+wandb_entity:
+  desc: null
+  value: level-replay
+wandb_project:
+  desc: null
+  value: ucb-drac
