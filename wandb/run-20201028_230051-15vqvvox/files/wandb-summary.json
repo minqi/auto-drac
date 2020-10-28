@@ -1,1 +1,0 @@
-{"train/nupdates": 0, "train/total_num_steps": 1024, "losses/dist_entropy": 2.7075718343257904, "losses/value_loss": 0.895644411444664, "losses/action_loss": -0.002585802615309755, "train/mean_episode_reward": 0.5, "train/median_episode_reward": 0.5, "test/mean_episode_reward": 1.0, "test/median_episode_reward": 0.0, "_step": 0, "_runtime": 538, "_timestamp": 1603926589}
