@@ -2,6 +2,17 @@ import argparse
 
 import torch
 
+
+def str2bool(v):
+    if isinstance(v, bool):
+       return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 parser = argparse.ArgumentParser(description='RL')
 
 # PPO Arguments. 
@@ -109,8 +120,7 @@ parser.add_argument(
     help='directory to save agent logs')
 parser.add_argument(
     '--no_cuda',
-    action='store_true',
-    default=False,
+    type=str2bool, nargs='?', const=True, default=False,
     help='disables CUDA training')
 parser.add_argument(
     '--hidden_size',
@@ -157,15 +167,13 @@ parser.add_argument(
     help='increase image size by')
 parser.add_argument(
     '--preempt',
-    action='store_true',
-    default=False,
+    type=str2bool, nargs='?', const=True, default=False,
     help='safe preemption: load the latest checkpoint with same args and continue training')
 
 # UCB-DrAC Arguments.
 parser.add_argument(
     '--use_ucb',
-    action='store_true',
-    default=False,
+    type=str2bool, nargs='?', const=True, default=False,
     help='use UCB to select an augmentation')
 parser.add_argument(
     '--ucb_window_length', 
@@ -181,8 +189,7 @@ parser.add_argument(
 # RL^2 Arguments.
 parser.add_argument(
     '--use_rl2',
-    action='store_true',
-    default=False,
+    type=str2bool, nargs='?', const=True, default=False,
     help='use RL^2 for selecting an augmentation')
 parser.add_argument(
     '--rl2_hidden_size',
@@ -208,8 +215,7 @@ parser.add_argument(
 # Meta-DrAC Arguments. 
 parser.add_argument(
     '--use_meta_learning',
-    action='store_true',
-    default=False,
+    type=str2bool, nargs='?', const=True, default=False,
     help='use meta learning for finding the best augmentation')
 parser.add_argument(
     '--meta_batch_size', 

@@ -81,6 +81,7 @@ def train(args):
     batch_size = int(args.num_processes * args.num_steps / args.num_mini_batch)
 
     if args.use_ucb:
+        print('Using UCB')
         aug_id = data_augs.Identity
         aug_list = [aug_to_func[t](batch_size=batch_size) 
             for t in list(aug_to_func.keys())]

@@ -13,18 +13,18 @@ do
     for env in "${envs[@]}"
     do
 echo "python train.py \\
---env_name $env \\
---use_ucb \\
---num_processes 64 \\
---log_interval 1 \\
---save_interval 10 \\
---num_levels 200 \\
---save_dir '~/logs/autodrac' \\
---log_dir '~/logs/autodrac' \\
---seed $seed \\
---run_name ucb-drac \\
---wandb_entity level-replay \\
---wandb_project ucb-drac
+--env_name=$env \\
+--use_ucb=True \\
+--num_processes=64 \\
+--log_interval=10 \\
+--save_interval=10 \\
+--num_levels=200 \\
+--save_dir='~/logs/autodrac' \\
+--log_dir='~/logs/autodrac' \\
+--seed=$seed \\
+--run_name=ucb-drac \\
+--wandb_entity=level-replay \\
+--wandb_project=ucb-drac
 "
     done
 done
