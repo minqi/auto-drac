@@ -1,11 +1,17 @@
 num_trials=5
-seeds=(0 1 2 3 4 5)
+seeds=(0 1 2 3 4)
 envs=(
-    "bigfish" 
-    "plunder" 
-    "chaser" 
-    "dodgeball"
-    "miner"
+	"bossfight"
+	"caveflyer"
+	"climber"
+	"coinrun"
+	"fruitbot"
+	"heist"
+	"jumper"
+	"leaper"
+	"maze"
+	"ninja"
+	"starpilot"
 )
 
 for seed in "${seeds[@]}"

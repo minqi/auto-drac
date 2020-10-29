@@ -79,7 +79,7 @@ def main(argv):
         # partition="priority",
         comment="ICLR 2021 submission",
         # time=1 * 24 * 60,
-        time=1 * 8 * 60,
+        time=1 * 12 * 60,
         nodes=1,
         ntasks_per_node=1,
         # job setup
